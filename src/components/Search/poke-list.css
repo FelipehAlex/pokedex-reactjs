@@ -1,0 +1,74 @@
+.host .listagem {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;  
+    max-width: 600px;
+	margin: 0 auto;
+    padding: 20px 0;
+	box-sizing: border-box;
+}
+
+.host .listagem .pokemon {
+    position: relative;
+    display: flex;
+    background: #FFF;
+
+    width: calc(49% - 2.5rem);
+    height: calc(157px - 40px);
+
+    margin-bottom: 10px;
+    padding: 20px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+    color: #262835;
+}
+
+.host .listagem .pokemon .pokemon-status h2 {
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 700;
+
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.host .listagem .pokemon .pokemon-status ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.host .listagem .pokemon .pokemon-status ul li {
+    background: #EFEFEF;
+    font-size: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50px;
+
+    width: 60px;
+    margin-bottom: 5px;
+}
+
+.host .listagem .pokemon .pokemon-image {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 90px;
+    width: 110px;
+
+    right: 20px;
+    bottom: 20px;
+
+    background: url('../../assets/bg/backgroung-list-pokemons.svg') no-repeat;
+}
+
+.host .listagem .pokemon .pokemon-image img {
+    width: 60px;
+}
