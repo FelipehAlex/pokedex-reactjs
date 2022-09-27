@@ -77,7 +77,7 @@ function Search() {
 
             <div className='listagem'>
                                 
-                { pokemonData?.filter((pokemon) => {
+                {!loading ? pokemonData?.filter((pokemon) => {
                     if (searchPoke === "") {
                         return pokemon
                     } else if (pokemon.name.toLowerCase().includes(searchPoke.toLocaleLowerCase())) {
@@ -88,7 +88,7 @@ function Search() {
                     return (
                         <Card key={i} pokemon={pokemon}/>    
                     );
-                })}
+                }) : <h1 style={{color: "#fff"}}>Carregando...</h1>}
 
             </div>
         </div>    

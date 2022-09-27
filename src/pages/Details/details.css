@@ -1,0 +1,246 @@
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 57.9vh;
+}
+
+main .pokemon_names {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    height: 75px;
+    
+    padding: 0 30px;
+}
+
+main .pokemon_names h1 {
+    color: #fff;
+    font-size: 32px;
+    text-transform: capitalize;
+}
+
+main .pokemon_names h2 {
+    position: absolute;
+    font-weight: 100;
+    top: 0;
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.1);
+}
+
+main .pokemon_status {
+    position: relative;
+}
+
+main .pokemon_status img {
+    position: absolute;
+    top: -90px;
+    left: 30px;
+    max-width: 130px;
+    z-index: 10;
+}
+
+main .pokemon__status__statistics {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: #fff;
+    
+    min-height: 43.9vh;
+    margin-top: 10px;
+
+    padding: 100px 35px 30px;
+    border-radius: 50px 50px 0 0;
+}
+
+main .pokemon__status__statistics h3 {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 32px;
+    text-decoration: underline;
+    color: #FF5473;
+}
+
+main .pokemon__status__statistics ol li {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 18px;
+    line-height: 130%;
+}
+
+main .pokemon__status__statistics .btn__secondary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    padding: 20px 0;
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    color: #fff;
+    background: #FF5473;
+
+}
+
+@media screen and (max-width: 420px) {
+    main {
+        margin-top: 10px;
+    }
+
+    main .pokemon_names h1 {
+        font-size: 20px;
+    }
+
+    man .pokemon_names h2 {
+        top: 35px;
+        font-size: 20px;
+    }
+
+    main .pokemon_status {
+        position: relative;
+    }
+
+    main .pokemon_status img {
+        position: absolute;
+        top: -80px;
+        left: 0;
+        max-width: 50px;
+    }
+
+    main .pokemon__status__statistics {
+        min-height: 57vh;
+        padding-top: 50px;
+    }
+
+} 
+
+.slideInDown {
+    -webkit-animation-name: slideInDown;
+    animation-name: slideInDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  @-webkit-keyframes slideInDown {
+    0% {
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+      visibility: visible;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
+  @keyframes slideInDown {
+    0% {
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+      visibility: visible;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
+  
+  .slideInLeft {
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  @-webkit-keyframes slideInLeft {
+    0% {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+      visibility: visible;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideInLeft {
+    0% {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+      visibility: visible;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  .slideInRight {
+    -webkit-animation-name: slideInRight;
+    animation-name: slideInRight;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  @-webkit-keyframes slideInRight {
+    0% {
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+      visibility: visible;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideInRight {
+    0% {
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+      visibility: visible;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  .fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function Card({ pokemon }) {
   return (
 
-    <Link to="/details" className="pokemon">
+    <Link to={`/details/${pokemon.id}`} className="pokemon">
 
       <section className="pokemon-status">
         <h2>{pokemon.name}</h2>

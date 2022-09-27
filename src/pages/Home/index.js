@@ -5,7 +5,6 @@ import Search from "../../components/Search";
 function Home() {
     return(
         <div>
-            <Header/>
             <Search/>
         </div>
     );
