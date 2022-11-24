@@ -4,12 +4,12 @@ import './poke-list.css';
 import search from '../../assets/icons/search.svg';
 import Card from '../../components/Card';
 import { useState, useEffect } from 'react';
-import { getAllPokemons ,getPokemon } from '../../services/pokemons';
+import { getAllPokemons, getPokemon } from '../../services/pokemons';
 
 
 function Search() {
 
-    const [ searchPoke, setSearchPoke ] = useState('');
+    const [searchPoke, setSearchPoke] = useState('');
     const [pokemonData, setPokemonData] = useState([]);
     const [nextUrl, setNextUrl] = useState('');
     const [previousUrl, setPreviousUrl] = useState('');
@@ -39,6 +39,7 @@ function Search() {
         setNextUrl(data.next);
         setPreviousUrl(data.previous);
         setLoading(false);
+        console.log(data)
     }
 
     const prev = async () => {
@@ -62,36 +63,42 @@ function Search() {
         setPokemonData(_pokemonData);
     }
 
-    return(
+    return (
         <div className='host'>
             <div className='main'>
                 <form>
-                    <input 
-                        type="text" 
-                        placeholder="Bucar Pokemon..." 
-                        onChange={(e) => setSearchPoke(e.target.value)} 
-                        />
+                    <input
+                        type="text"
+                        placeholder="Bucar Pokemon..."
+                        onChange={(e) => setSearchPoke(e.target.value)}
+                    />
                     <img src={search} alt="Bucar Pokemon" />
                 </form>
             </div>
 
             <div className='listagem'>
-                                
+
                 {!loading ? pokemonData?.filter((pokemon) => {
                     if (searchPoke === "") {
                         return pokemon
                     } else if (pokemon.name.toLowerCase().includes(searchPoke.toLocaleLowerCase())) {
                         return pokemon
                     }
-                    
-                }).map(( pokemon, i ) => {
-                    return (
-                        <Card key={i} pokemon={pokemon}/>    
-                    );
-                }) : <h1 style={{color: "#fff"}}>Carregando...</h1>}
 
+                }).map((pokemon, i) => {
+                    return (
+                        <Card key={i} pokemon={pokemon} />
+                    );
+                }) : <h1 style={{ color: "#fff" }}>Carregando...</h1>}
+
+            <div className='btns'>
+                <button className='btn_page' onClick={() => prev()}>Prev</button>
+                <button className='btn_page' onClick={() => next()}>Next</button>
             </div>
-        </div>    
+            </div>
+
+
+        </div>
     );
 }
 

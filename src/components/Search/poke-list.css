@@ -1,3 +1,4 @@
+
 .host .listagem {
     display: flex;
     justify-content: space-between; 
@@ -71,4 +72,36 @@
 
 .host .listagem .pokemon .pokemon-image img {
     width: 60px;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.btns .btn_page {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #FF5473;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    text-transform: uppercase;
+}
+
+.btns .btn_page:hover {
+    background-color: #ff5473dc;
+}
+
+.btns .btn_page:active {
+    background-color: #ff234b;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
